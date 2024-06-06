@@ -714,11 +714,11 @@ impl<T: TS> TS for Option<T> {
     type WithoutGenerics = Self;
 
     fn name() -> String {
-        format!("{} | null", T::name())
+        format!("{} | undefined", T::name())
     }
 
     fn inline() -> String {
-        format!("{} | null", T::inline())
+        format!("{} | undefined", T::inline())
     }
 
     fn visit_dependencies(v: &mut impl TypeVisitor)
